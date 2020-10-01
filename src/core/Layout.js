@@ -1,6 +1,7 @@
 import React from "react";
 import Menu from "./Menu";
 import "../styles.css";
+import Contact from "./Contact";
 
 const Layout = ({
     title = "Title",
@@ -15,7 +16,12 @@ const Layout = ({
             <p className="lead">{description}</p>
         </div>
         <div className={className}>{children}</div>
+        <div className="more-top">
+        <Contact />
+        </div>
+        
     </div>
+    
 );
 
 export default Layout;

@@ -116,9 +116,8 @@
      }
  } */
  .jumbotron{
-    background: url("./images/image1.jpg");
-    background-color: #cccccc;
-    height: 500px;
+    background: url("https://images.pexels.com/photos/70842/hot-pepper-pepper-fire-food-70842.jpeg?cs=srgb&dl=pexels-pixabay-70842.jpg&fm=jpg");
+    height:300px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -137,7 +136,7 @@ background: #272727;
  }
 
  .man3{
-    background-color: #cccccc;
+    
     height: 500px;
     background-position: center;
     background-repeat: no-repeat;
@@ -145,3 +144,51 @@ background: #272727;
     position: relative;
  }
 
+.ttext{
+    font-size: 14px;
+}
+
+.shopee{
+  height: 30px;
+}
+
+.kk{
+    height:50px;
+}
+
+.container {
+    position: relative;
+  }
+  
+  .vertical-center {
+    margin-top: 20px; 
+  }
+
+  .more-top{
+      margin-top: 30px;
+      
+  }
+
+
+  .jumbotron1{
+      color: honeydew;
+    background: url("https://images.unsplash.com/photo-1484807352052-23338990c6c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+    height:300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+ }
+
+ .linkcol{
+     color: ivory;
+ }
+
+ #ccrimage{
+    background:url("./images/ccrimage.png");
+    height:300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+ }

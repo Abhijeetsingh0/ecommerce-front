@@ -39,7 +39,7 @@ const Product = (props) => {
     <Layout title={product && product.name} description={product && product.description && product.description.substring(0,100)} className="container-fluid">
 
        <div className="row">
-          <div className="col-8">
+          <div className="">
 
           {
                product &&
@@ -50,8 +50,9 @@ const Product = (props) => {
            }
 
           </div>
-          <div className="col-4">
-            <h4>Related product</h4>
+          <div className="vertical-center more-top">
+            <h2>Related product</h2>
+            <hr/>
             {relatedProduct.map((p,i)=>(
                 <div className="mb-3">
                 <Card key={i} product={p} />    

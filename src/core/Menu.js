@@ -14,13 +14,14 @@ const isActive = (history, path) => {
 const Menu = ({ history }) => (
     <div>
         <ul className="nav nav-tabs bg-dark">
+            
             <li className="nav-item">
                 <Link
                     className="nav-link"
                     style={isActive(history, "/")}
                     to="/"
                 >
-                    Home
+                  <p className="ttext"> Home</p> 
                 </Link>
             </li>
 
@@ -30,7 +31,7 @@ const Menu = ({ history }) => (
                     style={isActive(history, "/shop")}
                     to="/shop"
                 >
-                    Shop
+                   <p className="ttext"> Shop</p>
                 </Link>
             </li>
 
@@ -40,10 +41,10 @@ const Menu = ({ history }) => (
                     style={isActive(history, "/cart")}
                     to="/cart"
                 >
-                    Cart{" "}
-                    <sup>
+                   <p className="ttext"> Cart</p>
+                    {/* <sup>
                         <small className="cart-badge">{itemTotal()}</small>
-                    </sup>
+                    </sup> */}
                 </Link>
             </li>
 
@@ -54,7 +55,7 @@ const Menu = ({ history }) => (
                         style={isActive(history, "/user/dashboard")}
                         to="/user/dashboard"
                     >
-                        Dashboard
+                       <p className="ttext">Profile</p> 
                     </Link>
                 </li>
             )}
@@ -66,7 +67,7 @@ const Menu = ({ history }) => (
                         style={isActive(history, "/admin/dashboard")}
                         to="/admin/dashboard"
                     >
-                        Dashboard
+                       <p className="ttext">Profile</p>
                     </Link>
                 </li>
             )}
@@ -79,7 +80,7 @@ const Menu = ({ history }) => (
                             style={isActive(history, "/signin")}
                             to="/signin"
                         >
-                            Signin
+                        <p>Signin</p>  
                         </Link>
                     </li>
 
@@ -89,7 +90,7 @@ const Menu = ({ history }) => (
                             style={isActive(history, "/signup")}
                             to="/signup"
                         >
-                            Signup
+                          <p className="ttext">Signup</p>  
                         </Link>
                     </li>
                 </Fragment>
@@ -106,7 +107,7 @@ const Menu = ({ history }) => (
                             })
                         }
                     >
-                        Signout
+                       <p className="ttext">Signout</p> 
                     </span>
                 </li>
             )}

@@ -102,7 +102,7 @@ const Card = ({product ,
         <div className="card-body">
           {shouldRedirect(redirect)}
             <ShowImage className="man3" item={product} url="product"/>
-            <h5 className="card-p  mt-2">{product.description.substring(0, 30)+" ..."} </h5>
+            <p className="card-p  mt-2">{product.description.substring(0, 30)+"..."} </p>
         <p>₹ {product.price}</p>
         <p>Category: {product.category && product.category.name}</p>
         {/* <p className="black-10">Added on {moment(product.createdAt).fromNow()}</p> */}

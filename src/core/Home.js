@@ -38,7 +38,7 @@ const Home = () => {
     },[])
 
 return(
-        <Layout title="Home Page" description="Node Reacy e-comm app" className="container-fluid">
+        <Layout title="FEAST WAGON" description="If you love food then we reach you , so chill..." className="container-fluid">
         
             <Search />
             <h2 className="mb-4">New Arrival</h2>

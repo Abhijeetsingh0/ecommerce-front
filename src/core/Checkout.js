@@ -129,8 +129,8 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
         <div onBlur={() => setData({ ...data, error: '' })}>
             {data.clientToken !== null && products.length > 0 ? (
                 <div>
-                    <div className="gorm-group mb-3 alert alert-primary">
-                        <h2 className="alert-primary">Delivery address and Phone no. :</h2>
+                    <div >
+                        <h2 className="textman">Delivery address and Phone no. :</h2>
                         <textarea
                             onChange={handleAddress}
                             className="form-control"
@@ -138,6 +138,12 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
                             placeholder="Type your delivery address and phone number here..."
                         />
                     </div>
+                    <hr/> 
+                    <div id="ccrimage"></div>
+                    <hr/>
+                    <h3>
+                        Use same numbers as shown above:-
+                    </h3>
 
                     <DropIn
                         options={{
@@ -170,7 +176,7 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
 
     return (
         <div>
-            <h2>Total: ${getTotal()}</h2>
+            <h2>Total: ₹{getTotal()}</h2>
             {showLoading(data.loading)}
             {showSuccess(data.success)}
             {showError(data.error)}

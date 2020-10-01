@@ -33,12 +33,12 @@ const Dashboard = () => {
                 <h4 className="card-header">User Links</h4>
                 <ul className="list-group">
                     <li className="list-group-item">
-                        <Link className="nav-link" to="/cart">
+                        <Link className="textman" to="/cart">
                             My Cart
                         </Link>
                     </li>
                     <li className="list-group-item">
-                        <Link className="nav-link" to={`/profile/${_id}`}>
+                        <Link className="textman" to={`/profile/${_id}`}>
                             Update Profile
                         </Link>
                     </li>
@@ -49,7 +49,7 @@ const Dashboard = () => {
 
     const userInfo = () => {
         return (
-            <div className="card mb-5">
+            <div className="card mb-5 man">
                 <h3 className="card-header">User Information</h3>
                 <ul className="list-group">
                     <li className="list-group-item">{name}</li>
@@ -64,7 +64,7 @@ const Dashboard = () => {
 
     const purchaseHistory = history => {
         return (
-            <div className="card mb-5">
+            <div className="card mb-5 man">
                 <h3 className="card-header">Purchase history</h3>
                 <ul className="list-group">
                     <li className="list-group-item">
@@ -77,7 +77,7 @@ const Dashboard = () => {
                                             <div key={i}>
                                                 <h6>Product name: {p.name}</h6>
                                                 <h6>
-                                                    Product price: ${p.price}
+                                                    Product price: ₹ {p.price}
                                                 </h6>
                                                 <h6>
                                                     Purchased date:{" "}
@@ -99,16 +99,25 @@ const Dashboard = () => {
 
     return (
         <Layout
-            title="Dashboard"
-            description={`G'day ${name}!`}
+            title="Profile"
+            description={`Hello ${name} :)`}
             className="container-fluid"
         >
-            <div className="row">
-                <div className="col-3">{userLinks()}</div>
-                <div className="col-9">
+
+
+<div className="container man">
+  <div className="vertical-center">
+  <div className="man">   {userLinks()}</div>
+                <div className="man">
                     {userInfo()}
                     {purchaseHistory(history)}
                 </div>
+  </div>
+  </div>
+
+
+            <div className="row">
+                
             </div>
         </Layout>
     );
