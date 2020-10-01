@@ -14,9 +14,6 @@ const Contact = () =>{
                 <li>
                 <a href="https://www.instagram.com/uchiha__boi_/?hl=en"> <h4 className="linkcol">INSTAGRAM</h4></a> 
                 </li>
-                <li>
-                <a href="https://www.instagram.com/uchiha__boi_/?hl=en"> <h4 className="linkcol">FACEBOOK</h4></a> 
-                </li>
             </ul>
             
              </p>
