@@ -38,8 +38,7 @@ const Home = () => {
     },[])
 
 return(
-    <Layout title="High on food!" description="Food fill up my mind with ideas,
-    Stay the highest in the room.." className="container-fluid">
+    <Layout title="High on food!" description="" className="container-fluid">
         
             <Search />
             <h2 className="mb-4">New Arrival</h2>
