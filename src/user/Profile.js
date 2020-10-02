@@ -8,13 +8,14 @@ const Profile = ({ match }) => {
     const [values, setValues] = useState({
         name: '',
         email: '',
+        phone:'',
         password: '',
         error: false,
         success: false
     });
 
     const { token } = isAuthenticated();
-    const { name, email, password, error, success } = values;
+    const { name, email,phone, password, error, success } = values;
 
     const init = userId => {
         // console.log(userId);
@@ -37,7 +38,7 @@ const Profile = ({ match }) => {
 
     const clickSubmit = e => {
         e.preventDefault();
-        update(match.params.userId, token, { name, email, password }).then(data => {
+        update(match.params.userId, token, { name, email , phone , password }).then(data => {
             if (data.error) {
                 // console.log(data.error);
                 alert(data.error);
@@ -47,6 +48,7 @@ const Profile = ({ match }) => {
                         ...values,
                         name: data.name,
                         email: data.email,
+                        phone:data.phone,
                         success: true
                     });
                 });
@@ -60,7 +62,7 @@ const Profile = ({ match }) => {
         }
     };
 
-    const profileUpdate = (name, email, password) => (
+    const profileUpdate = (name, email , phone , password) => (
         <form>
             <div className="form-group">
                 <label className="text-muted">Name</label>
@@ -69,6 +71,10 @@ const Profile = ({ match }) => {
             <div className="form-group">
                 <label className="text-muted">Email</label>
                 <input type="email" onChange={handleChange('email')} className="form-control" value={email} />
+            </div>
+            <div className="form-group">
+                <label className="text-muted">Phone no.</label>
+                <input type="email" onChange={handleChange('phone')} className="form-control" value={phone} />
             </div>
             <div className="form-group">
                 <label className="text-muted">Password</label>
@@ -84,7 +90,7 @@ const Profile = ({ match }) => {
     return (
         <Layout title="Profile" description="Update your profile" className="container-fluid">
             <h2 className="mb-4">Profile update</h2>
-            {profileUpdate(name, email, password)}
+            {profileUpdate(name, email , phone , password)}
             {redirectUser(success)}
         </Layout>
     );

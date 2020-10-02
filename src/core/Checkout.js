@@ -40,11 +40,6 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
         setData({ ...data, address: event.target.value });
     };
 
-    const handlephone = event => {
-        setData({ ...data, phone: event.target.value });
-    };
-
-
     const getTotal = () => {
         return products.reduce((currentValue, nextValue) => {
             return currentValue + nextValue.count * nextValue.price;
@@ -147,6 +142,7 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
                     <div id="ccrimage"></div>
                     <hr/>
                     <h3>
+                        Hey, chill we give only COD so,
                         Use same numbers as shown above:-
                     </h3>
 
@@ -172,8 +168,8 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
     );
 
     const showSuccess = success => (
-        <div className="alert alert-info" style={{ display: success ? '' : 'none' }}>
-            Thanks! Your payment was successful!
+        <div className="alert alert-success" style={{ display: success ? '' : 'none' }}>
+            Thanks! You will receive order confirmation call soon... 
         </div>
     );
 

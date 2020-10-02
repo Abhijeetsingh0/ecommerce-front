@@ -9,8 +9,11 @@ const Dashboard = () => {
     const [history, setHistory] = useState([]);
 
     const {
-        user: { _id, name, email,phone, role }
+        user: { _id, name, email, phone , role }
     } = isAuthenticated();
+
+    console.log(_id,name,phone,email,role)
+
     const token = isAuthenticated().token;
 
     const init = (userId, token) => {
@@ -54,9 +57,11 @@ const Dashboard = () => {
                 <ul className="list-group">
                     <li className="list-group-item">{name}</li>
                     <li className="list-group-item">{email}</li>
+
                     <li className="list-group-item">
                         {role === 1 ? "Admin" : "Registered User"}
                     </li>
+                    <li className="list-group-item">{phone}</li>
                 </ul>
             </div>
         );

@@ -7,6 +7,7 @@ const Signup = () => {
     const [values , setValues] = useState({
         name :'',
         email:'',
+        phone:'',
         password:'',
         error:'',
         success:false
@@ -21,7 +22,7 @@ const Signup = () => {
     const clickSubmit = event => {
         event.preventDefault();
         setValues({ ...values, error: false });
-        signup({ name, email, password }).then(data => {
+        signup({ name, email , phone , password }).then(data => {
             if (data.error) {
                 setValues({ ...values, error: data.error, success: false });
             } else {
@@ -29,6 +30,7 @@ const Signup = () => {
                     ...values,
                     name: '',
                     email: '',
+                    phone:'',
                     password: '',
                     error: '',
                     success: true
@@ -48,6 +50,11 @@ const Signup = () => {
             <div className="form-group">
                 <label className="text-muted">Email</label>
                 <input onChange={handleChange('email')} type="email" className="form-control" value={email} />
+            </div>
+
+            <div className="form-group">
+                <label className="text-muted">Phone</label>
+                <input onChange={handleChange('phone')} type="number" className="form-control" value={phone} />
             </div>
 
             <div className="form-group">

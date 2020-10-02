@@ -9,6 +9,7 @@ const Orders = () => {
     const [orders , setOrders] = useState([])
     const [statusValues, setStatusValues] = useState([]);
     const {user , token } = isAuthenticated() 
+
     const loadOrders = () => {
             listOrders(user._id , token).then(data => {
                 if(data.error){
@@ -18,6 +19,7 @@ const Orders = () => {
                 }
             })
     }
+
 
     const loadStatusValues = () => {
         getStatusValues(user._id, token).then(data => {
@@ -88,7 +90,6 @@ const Orders = () => {
         </div>
     );
 
-
     return (
         <Layout
             title="Orders "
@@ -117,6 +118,9 @@ const Orders = () => {
                                 </li>
                                 <li className="list-group-item">
                                     Ordered by:  {o.user.name}
+                                </li>
+                                <li className="list-group-item">
+                                    Phone no.:  {o.user.phone}
                                 </li>
                                 <li className="list-group-item">
                                     Ordered on:  {moment(o.createdAt).fromNow()}
