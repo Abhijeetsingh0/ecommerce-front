@@ -125,15 +125,20 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
             });
     };
 
+    const required = value => value ? undefined: 'Required';
+
     const showDropIn = () => (
         <div onBlur={() => setData({ ...data, error: '' })}>
             {data.clientToken !== null && products.length > 0 ? (
                 <div>
-                    <div >
+                    <div className="alert alert-success" >
                         <h2 className="textman">Delivery address and Phone no. :</h2>
                         <textarea
                             onChange={handleAddress}
                             className="form-control"
+                            cols="10"
+                            rows="14"
+                            validate={required}
                             value={data.address}
                             placeholder="Type your delivery address and phone number here..."
                         />
