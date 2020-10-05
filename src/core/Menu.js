@@ -31,7 +31,7 @@ const Menu = ({ history }) => (
                     style={isActive(history, "/shop")}
                     to="/shop"
                 >
-                   <p className="ttext"> Shop</p>
+                   <p className="ttext"> Filter</p>
                 </Link>
             </li>
 
