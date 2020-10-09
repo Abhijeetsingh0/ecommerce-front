@@ -130,7 +130,7 @@ const UpdateProduct = ({ match }) => {
             </div>
 
             <div className="form-group">
-                <label className="text-muted">Category</label>
+                <label className="text-muted">Shop</label>
                 <select onChange={handleChange('category')} className="form-control">
                     <option>Please select</option>
                     {categories &&

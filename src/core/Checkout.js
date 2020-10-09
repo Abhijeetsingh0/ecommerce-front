@@ -127,22 +127,25 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
             {data.clientToken !== null && products.length > 0 ? (
                 <div>
                     <div className="alert alert-success" >
-                        <h2 className="textman">Delivery address and Phone no. :</h2>
+                        <h2 className="textman">Delivery address :</h2>
                         <textarea
                             onChange={handleAddress}
                             className="form-control"
-                            cols="10"
-                            rows="14"
+                            cols="8"
+                            rows="10"
                             validate={required}
                             value={data.address}
-                            placeholder="Type your delivery address and phone number here..."
+                            placeholder="Type your delivery address..."
                         />
                     </div>
+                    <h3>
+                    Hey hey, We give only COD so just follow along... 
+                    </h3>
                     <hr/> 
+                    <p>it's just an exmple image.</p>
                     <div id="ccrimage"></div>
                     <hr/>
                     <h3>
-                        Hey, chill we give only COD so,
                         Use same numbers as shown above:-
                     </h3>
 
@@ -170,6 +173,8 @@ const Checkout = ({ products, setRun = f => f, run = undefined }) => {
     const showSuccess = success => (
         <div className="alert alert-success" style={{ display: success ? '' : 'none' }}>
             Thanks! You will receive order confirmation call soon... 
+            <hr/>
+            You might receive multiple call depand on the source. 
         </div>
     );
 

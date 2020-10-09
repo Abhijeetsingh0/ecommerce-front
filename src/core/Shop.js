@@ -104,14 +104,14 @@ const Shop = () => {
 
     return (
         <Layout
-            title="Shop Page"
+            title="Filter Page"
             description="Search and find food of your choice..."
             className="container-fluid"
         >
             <div >
                 <div className="row container">
                     <div className="col-6">
-                    <h4>Filter by categories</h4>
+                    <h4>Filter by Shop</h4>
                     <ul>
                         <Checkbox className="shopee"
                             categories={categories}

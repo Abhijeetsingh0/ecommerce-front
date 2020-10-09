@@ -113,7 +113,7 @@ const AddProduct = () =>{
 
 
             <div className="form-group">
-                <label className="text-muted">Category</label>
+                <label className="text-muted">select your shope</label>
                 <select onChange={handleChange('category')} className="form-control" >
                     <option>Pleas Select</option>
                    {categories && categories.map((c,i)=>(<option value={c._id}>{c.name}</option>))}

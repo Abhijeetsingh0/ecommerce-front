@@ -41,7 +41,7 @@ const AddCategory = () =>{
                 <input type="text" className="form-control" onChange={handleChange} value={name}
                 autoFocus required />
             </div>
-            <button className="btn btn-outline-primary"> Create Category</button>
+            <button className="btn btn-outline-primary"> Create shop</button>
         </form>
     );
 
@@ -53,7 +53,7 @@ const AddCategory = () =>{
 
     const showError = () => {
         if (error) {
-            return <h3 className="text-danger">Category should be unique</h3>;
+            return <h3 className="text-danger">shop should be unique</h3>;
         }
     };
 
@@ -68,8 +68,8 @@ const AddCategory = () =>{
 
     return (
         <Layout
-            title="Add a new category"
-            description={`G'day ${user.name}, ready to add a new category?`}
+            title="Add a new shop"
+            description={`G'day ${user.name}, ready to add a new shop?`}
         >
             <div className="row">
                 <div className="col-md-8 offset-md-2">
