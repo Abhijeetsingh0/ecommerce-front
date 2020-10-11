@@ -6,7 +6,7 @@ const Contact = () =>{
     return (
         <div className="man textman">
         <div className="jumbotron1">
-            <h2>Contact us :- 8871592651</h2>
+            <h3>Contact us :- 6263155360 and 9407849550</h3>
             <p className="lead">
             <ul style={{listStyleType:'none'}}>
                 <li className="mt-3">
